@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="RustedMetroTheme" load_steps=5 format=3 uid="uid://cx86ypcvpaht1"]
+
+[ext_resource type="Script" path="res://scenes/rusted_metro_scene/themes/rusted_metro_theme.gd" id="1_ljywj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_igtp3"]
+sky_top_color = Color(0.520857, 0.362215, 0.679168, 1)
+sky_horizon_color = Color(0.782597, 0.640327, 0.0702356, 1)
+sky_curve = 0.395852
+
+[sub_resource type="Sky" id="Sky_g52ax"]
+sky_material = SubResource("ProceduralSkyMaterial_igtp3")
+
+[sub_resource type="Environment" id="Environment_llf2p"]
+background_mode = 2
+sky = SubResource("Sky_g52ax")
+
+[resource]
+script = ExtResource("1_ljywj")
+theme_name = "Yelloish"
+lights_color = Color(0.711926, 0.660696, 0.253258, 1)
+lights_energy = 1.94
+lights_material_emission_intensity = 7.0
+world_environment = SubResource("Environment_llf2p")
+psx_dithering = true
+color_threshold = false
+thresh_r = 0.0
+thresh_g = 0.0
+thresh_b = 0.0

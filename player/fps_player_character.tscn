@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://5m1g178ubchd"]
+
+[ext_resource type="Script" path="res://player/fps_player_character.gd" id="1_j1svx"]
+[ext_resource type="Script" path="res://player/reticle.gd" id="2_qhyan"]
+[ext_resource type="Script" path="res://player/player_camera.gd" id="2_qy0gv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kxxeq"]
+radius = 0.4
+height = 1.8
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("neck", "camera")]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_j1svx")
+neck = NodePath("Neck")
+camera = NodePath("Neck/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_kxxeq")
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66672, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Neck" node_paths=PackedStringArray("camera")]
+script = ExtResource("2_qy0gv")
+camera = NodePath(".")
+shake_intensity = 1.0
+shake_frequency = 2.0
+shake_noise_scale = 0.94
+shake_oscillation_speed = 2.0
+shake_oscillation_amplitude = 0.3
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Reticle" type="CenterContainer" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_qhyan")
+lines = false

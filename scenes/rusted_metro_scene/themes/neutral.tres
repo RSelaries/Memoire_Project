@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RustedMetroTheme" load_steps=5 format=3 uid="uid://b0tje4hy6a1qs"]
+
+[ext_resource type="Script" path="res://scenes/rusted_metro_scene/themes/rusted_metro_theme.gd" id="1_yeair"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj2i1"]
+
+[sub_resource type="Sky" id="Sky_iqyh1"]
+sky_material = SubResource("ProceduralSkyMaterial_fj2i1")
+
+[sub_resource type="Environment" id="Environment_wvemk"]
+background_mode = 2
+sky = SubResource("Sky_iqyh1")
+
+[resource]
+script = ExtResource("1_yeair")
+theme_name = "Default"
+lights_color = Color(1, 1, 1, 1)
+lights_energy = 1.0
+lights_material_emission_intensity = 1.0
+world_environment = SubResource("Environment_wvemk")
+psx_dithering = false
+color_threshold = false
+thresh_r = 0.0
+thresh_g = 0.0
+thresh_b = 0.0

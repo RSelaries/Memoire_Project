@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="RustedMetroTheme" load_steps=3 format=3 uid="uid://cauewsowgl0ov"]
+
+[ext_resource type="Script" path="res://scenes/rusted_metro_scene/themes/rusted_metro_theme.gd" id="1_2ih3y"]
+
+[sub_resource type="Environment" id="Environment_mdtox"]
+background_mode = 1
+
+[resource]
+script = ExtResource("1_2ih3y")
+theme_name = "Iron Lung Typa"
+lights_color = Color(0.968627, 0.454902, 0.403922, 1)
+lights_energy = 0.08
+lights_material_emission_intensity = 1.0
+world_environment = SubResource("Environment_mdtox")
+psx_dithering = true
+color_threshold = false
+thresh_r = 0.0
+thresh_g = 0.0
+thresh_b = 0.0
