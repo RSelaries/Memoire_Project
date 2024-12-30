@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://bifetfqje067" path="res://assets/rusted_metro/metro_light_fixtures.tres" id="2_hb2rk"]
 [ext_resource type="PackedScene" uid="uid://b5t3ekulhinbx" path="res://assets/rusted_metro/rusted_metro_doors.glb" id="3_0bnvh"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8eb6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkl43"]
 albedo_color = Color(0.987069, 0.674754, 0.634472, 1)
 emission_enabled = true
 emission = Color(0.987069, 0.674754, 0.634472, 1)
@@ -67,7 +67,7 @@ lights_energy = 0.2
 [node name="rustedMetroGltf" parent="." instance=ExtResource("1_4t651")]
 
 [node name="Metro_Body" parent="rustedMetroGltf" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_c8eb6")
+surface_material_override/0 = SubResource("StandardMaterial3D_bkl43")
 
 [node name="MetroCollisions" type="AnimatableBody3D" parent="."]
 
